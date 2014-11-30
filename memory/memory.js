@@ -30,42 +30,81 @@ var assignSymbols = function(box) {
       
       for(var i = 0; i < box.length; i += 1)
       {
+
       	if (symbols["@"]=== 2)
       	{
-      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+           return true;
       	}
-      	else if (symbols["$"]=== 2)
+      		else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["!"]=== 2)
+
+      	if (symbols["$"]=== 2)
+      		{
+           return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["?"]=== 2)
+
+      	if (symbols["!"]=== 2)
+      	{
+      		return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["*"]=== 2)
+
+      	if (symbols["?"]=== 2)
+      	{
+      		return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["%"]=== 2)
+      	
+      	if (symbols["*"]=== 2)
+      	{
+      		return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["#"]=== 2)
+
+      	if (symbols["%"]=== 2)
+      	{
+      		return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else if (symbols["{}"]=== 2)
+
+      	if (symbols["#"]=== 2) 
+      	{
+            return true;
+      	}
+      	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-        else
-        {
+
+      	if (symbols["{}"]=== 2)
+      	{
+      		return true;
+      	}
+      	else
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+       
         	assignSymbols(boxes);
-        }
+        
     }
 };
 
