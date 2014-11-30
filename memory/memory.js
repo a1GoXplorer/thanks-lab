@@ -14,51 +14,72 @@ window.onload = function() {
   boxes.box7 = document.getElementById("squareSeven");
   boxes.box8 = document.getElementById("squareEight");
   boxes.box9 = document.getElementById("squareNine");
-  boxes.box10 = document.getElementById("squareOneZero")
-  boxes.box11 = document.getElementById("squareOneOne")
+  boxes.box10 = document.getElementById("squareOneZero");
+  boxes.box11 = document.getElementById("squareOneOne");
   var resetButton = document.getElementById("reset");
 
   //array of symbols
-  var symbols = ["@","$","!","?","*","%","#","{}"]
+  var symbols = {"@":0,"$":0,"!":0,"?":0,"*":0,"%":0,"#":0,"{}":0}
   //empty object for each innerHTML ID
   var fillTheBoxes = {}
   //keeps track of how many rounds a player has gone w/o a solve
   var turn = 1;
-d
 
 //assignment of symbols
 var assignSymbols = function(box) {
       
       for(var i = 0; i < box.length; i += 1)
       {
-      	if (box.innerHTML === !undefined)
+      	if (symbols["@"]=== 2)
       	{
-      		box.innerHTML === symbols[Math.floor(symbols.length * Math.random())];
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
-      	else 
+      	else if (symbols["$"]=== 2)
       	{
-      		assignSymbols(boxes);
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["!"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["?"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["*"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["%"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["#"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+      	else if (symbols["{}"]=== 2)
+      	{
+      		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
+      	}
+        else
+        {
+        	assignSymbols(boxes);
         }
+    }
 };
 
 
-var checksMatchesarr
+//var checksMatchesarr
 
 
 
 //reveals sign, checks for a match
- var playBox = function([arr], function(box) ) {
+ /*var playBox = function([arr], function(box) ) {
   for(var i = 0; i<boxes.length; i++) {
     checksMatches(boxes[i], i, boxes);
   };
 };
-
-
- }
-  
-
-
-
 
 
 
