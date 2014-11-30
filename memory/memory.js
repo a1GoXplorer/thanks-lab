@@ -13,6 +13,10 @@ window.onload = function() {
   var box9 = document.getElementById("squareNine");
   var box10 = document.getElementById("squareOneZero");
   var box11 = document.getElementById("squareOneOne");
+  var box12 = document.getElementById("squareOneTwo");
+  var box13 = document.getElementById("squareOneThree");
+  var box14 = document.getElementById("squareOneFour");
+  var box15 = document.getElementById("squareOneFive");
   var resetButton = document.getElementById("reset");
 
 var stringsOfJoy = ["!", "@", "#", "$", "%", "&", "*", "?", "!", "@", "#", "$", "%", "&", "*", "?"];
@@ -44,11 +48,32 @@ console.log(stringsOfJoy);
 var makesMarkHappy = function () {
 
   box0.innerHTML = stringsOfJoy[0];
+  box1.innerHTML = stringsOfJoy[1];
+  box2.innerHTML = stringsOfJoy[2];
+  box3.innerHTML = stringsOfJoy[3];
+  box4.innerHTML = stringsOfJoy[4];
+  box5.innerHTML = stringsOfJoy[5];
+  box6.innerHTML = stringsOfJoy[6];
+  box7.innerHTML = stringsOfJoy[7];
+  box8.innerHTML = stringsOfJoy[8];
+  box9.innerHTML = stringsOfJoy[9];
+  box10.innerHTML = stringsOfJoy[10];
+  box11.innerHTML = stringsOfJoy[11];
+  box12.innerHTML = stringsOfJoy[12];
+  box13.innerHTML = stringsOfJoy[13];
+  box14.innerHTML = stringsOfJoy[14];
+  box15.innerHTML = stringsOfJoy[15];
+  
 }
 
-console.log(makesMarkHappy());
 
+
+console.log(makesMarkHappy());
+console.log(box0.innerHTML);
 console.log(stringsOfJoy[0]);
+
+
+
 
 
 
