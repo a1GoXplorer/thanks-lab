@@ -1,4 +1,73 @@
 window.onload = function() {
+   
+   //we make vars here because we sucks
+  var box0 = document.getElementById("squareZero");
+  var box1 = document.getElementById("squareOne");
+  var box2 = document.getElementById("squareTwo");
+  var box3 = document.getElementById("squareThree");
+  var box4 = document.getElementById("squareFour");
+  var box5 = document.getElementById("squareFive");
+  var box6 = document.getElementById("squareSix");
+  var box7 = document.getElementById("squareSeven");
+  var box8 = document.getElementById("squareEight");
+  var box9 = document.getElementById("squareNine");
+  var box10 = document.getElementById("squareOneZero");
+  var box11 = document.getElementById("squareOneOne");
+  var resetButton = document.getElementById("reset");
+
+var stringsOfJoy = ["!", "@", "#", "$", "%", "&", "*", "?", "!", "@", "#", "$", "%", "&", "*", "?"];
+
+
+//the Fisher-Yates Shuffle
+var shuffleStrings = function(arr) {
+    
+    var currentIndex = stringsOfJoy.length, temporaryValue, randomIndex;
+
+     //While there remain elements to shuffle...
+     while (0 !== currentIndex) {
+
+      //pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      //Swap it with the current element
+      temporaryValue = stringsOfJoy[currentIndex];
+      stringsOfJoy[currentIndex] = stringsOfJoy[randomIndex];
+      stringsOfJoy[randomIndex] = temporaryValue;
+     }
+     return stringsOfJoy;
+}
+
+shuffleStrings(stringsOfJoy);
+console.log(stringsOfJoy);
+
+var makesMarkHappy = function () {
+
+  box0.innerHTML = stringsOfJoy[0];
+}
+
+console.log(makesMarkHappy());
+
+console.log(stringsOfJoy[0]);
+
+
+
+
+resetButton.onclick=function() {
+    document.location.reload(true);
+  } 
+
+
+//end of line
+};
+
+
+
+
+
+
+
+/*window.onload = function() {
 
 //alert("JS is a go for launch, Capt.");
 
@@ -19,21 +88,22 @@ window.onload = function() {
   var resetButton = document.getElementById("reset");
 
   //array of symbols
-  var symbols = {"@":0,"$":0,"!":0,"?":0,"*":0,"%":0,"#":0,"{}":0}
+  //var symbols = {"@":0,"$":0,"!":0,"?":0,"*":0,"%":0,"#":0,"{}":0}
+  var symbols = ["@","$","!","?","*","%","#","{}"]
   //empty object for each innerHTML ID
   var fillTheBoxes = {}
   //keeps track of how many rounds a player has gone w/o a solve
   var turn = 1;
 
 //assignment of symbols
-var assignSymbols = function(box) {
+var assignSymbols = function(box) 
       
       for(var i = 0; i < box.length; i += 1)
       {
 
       	if (symbols["@"]=== 2)
       	{
-           return true;
+           assignSymbols(boxes);
       	}
       		else
       	{
@@ -42,7 +112,7 @@ var assignSymbols = function(box) {
 
       	if (symbols["$"]=== 2)
       		{
-           return true;
+           assignSymbols(boxes);
       	}
       	else
       	{
@@ -51,7 +121,7 @@ var assignSymbols = function(box) {
 
       	if (symbols["!"]=== 2)
       	{
-      		return true;
+      		assignSymbols(boxes);
       	}
       	else
       	{
@@ -60,7 +130,7 @@ var assignSymbols = function(box) {
 
       	if (symbols["?"]=== 2)
       	{
-      		return true;
+      		assignSymbols(boxes);
       	}
       	else
       	{
@@ -69,7 +139,7 @@ var assignSymbols = function(box) {
       	
       	if (symbols["*"]=== 2)
       	{
-      		return true;
+      		assignSymbols(boxes);
       	}
       	else
       	{
@@ -78,7 +148,7 @@ var assignSymbols = function(box) {
 
       	if (symbols["%"]=== 2)
       	{
-      		return true;
+      		assignSymbols(boxes);
       	}
       	else
       	{
@@ -87,7 +157,7 @@ var assignSymbols = function(box) {
 
       	if (symbols["#"]=== 2) 
       	{
-            return true;
+            assignSymbols(boxes);
       	}
       	else
       	{
@@ -96,16 +166,15 @@ var assignSymbols = function(box) {
 
       	if (symbols["{}"]=== 2)
       	{
-      		return true;
+      		assignSymbols(boxes);
       	}
       	else
       	{
       		box.innerHTML = symbols[Math.floor(symbols.length * Math.random())];
       	}
        
-        	assignSymbols(boxes);
-        
     }
+    assignSymbols(boxes);
 };
 
 
@@ -145,6 +214,8 @@ var setClickHandler = function (box) {
 
 resetButton.onclick=function() {
   	document.location.reload(true);
-  }
+  } 
 
 };
+
+*/
